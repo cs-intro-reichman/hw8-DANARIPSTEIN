@@ -14,6 +14,10 @@ public class Network {
         this.userCount = 0;
     }
 
+    public int getUserCount() {
+        return this.userCount;
+    }
+
     /**
      * Creates a network with some users. The only purpose of this constructor is
      * to allow testing the toString and getUser methods, before implementing other
@@ -102,8 +106,7 @@ public class Network {
         int max = 0;
         int index = 0;
         for (int i = 0; i < userCount; i++) {
-            if (followeeCount(users[i].getName()) > max)
-            {
+            if (followeeCount(users[i].getName()) > max) {
                 max = followeeCount(users[i].getName());
                 index = i;
             }
@@ -121,7 +124,7 @@ public class Network {
         int count = 0;
         for (int i = 0; i < userCount; i++) {
             if (users[i].follows(name) == true)
-            count++;
+                count++;
         }
         return count;
     }
