@@ -51,8 +51,7 @@ public class User {
      */
     public boolean follows(String name) {
         for (int i = 0; i < fCount; i++) {
-            if (follows[i] != null) {
-                if (follows[i].equals(name))
+            if (follows[i] != null && follows[i].equals(name)){
                     return true;
             }
         }
